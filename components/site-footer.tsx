@@ -1,13 +1,13 @@
-import Link from "next/link";
-import Image from "next/image";
-import { siteConfig } from "@/config/site";
-import { buttonVariants } from "@/components/ui/button";
-import { Icons } from "./icons";
-import { ThemeToggle } from "@/components/theme-toggle";
-import Newsletter from "@/components/newsletter";
-import { useTheme } from "next-themes";
-import { links } from "@/lib/links";
-import { HeadingH6 } from "./typography";
+import Link from 'next/link';
+import Image from 'next/image';
+import { siteConfig } from '@/config/site';
+import { buttonVariants } from '@/components/ui/button';
+import { Icons } from './icons';
+import { ThemeToggle } from '@/components/theme-toggle';
+import Newsletter from '@/components/newsletter';
+import { useTheme } from 'next-themes';
+import { links } from '@/lib/links';
+import { HeadingH6 } from './typography';
 
 export function SiteFooter() {
   const { theme } = useTheme();
@@ -20,15 +20,13 @@ export function SiteFooter() {
             {links.map((link) => {
               return (
                 <div className="mt-4" key={link.id}>
-                  <div>
-                    <a
-                      href={link.url}
-                      target="_blank"
-                      className="hover:underline hover:italic"
-                    >
-                      {link.title}
-                    </a>
-                  </div>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    className="hover:underline hover:italic"
+                  >
+                    {link.title}
+                  </a>
                 </div>
               );
             })}
@@ -54,8 +52,8 @@ export function SiteFooter() {
               >
                 <div
                   className={buttonVariants({
-                    size: "icon",
-                    variant: "ghost",
+                    size: 'icon',
+                    variant: 'ghost',
                   })}
                 >
                   <Icons.facebook
@@ -73,8 +71,8 @@ export function SiteFooter() {
               >
                 <div
                   className={buttonVariants({
-                    size: "icon",
-                    variant: "ghost",
+                    size: 'icon',
+                    variant: 'ghost',
                   })}
                 >
                   <Icons.instagram className="h-5 w-5" strokeWidth="1.5" />
@@ -89,8 +87,8 @@ export function SiteFooter() {
               >
                 <div
                   className={buttonVariants({
-                    size: "icon",
-                    variant: "ghost",
+                    size: 'icon',
+                    variant: 'ghost',
                   })}
                 >
                   <Icons.twitch className="h-5 w-5" strokeWidth="1.5" />
@@ -105,8 +103,8 @@ export function SiteFooter() {
               >
                 <div
                   className={buttonVariants({
-                    size: "icon",
-                    variant: "ghost",
+                    size: 'icon',
+                    variant: 'ghost',
                   })}
                 >
                   <Icons.twitter
@@ -124,8 +122,8 @@ export function SiteFooter() {
               >
                 <div
                   className={buttonVariants({
-                    size: "icon",
-                    variant: "ghost",
+                    size: 'icon',
+                    variant: 'ghost',
                   })}
                 >
                   <Icons.youtube className="h-5 w-5" strokeWidth="1.5" />
